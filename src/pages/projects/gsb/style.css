@@ -1,0 +1,29 @@
+.intro_secc {
+    height: calc(100vh - 60px);
+    min-height: 700px;
+    height: 100vh;
+    margin-top: -60px;
+    background-size: cover;
+
+    margin-left: 0;
+}
+
+
+
+.intro_seccc .text,
+.intro_secc .h_bg-image {
+    width: 100%;
+    filter: brightness(0.5) blur(1.5px);
+
+
+}
+
+.project-info {
+    mix-blend-mode: difference;
+    position: absolute;
+    width: 24vw;
+    right: 10vw;
+    height: 100vh;
+    padding: 10vh 0px;
+    z-index: 999999;
+}
