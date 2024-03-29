@@ -6,10 +6,9 @@ import { ContactUs } from "../pages/contact/index.jsx";
 import { About } from "../pages/about/index.jsx";
 import { Socialicons } from "../components/socialicons/index.jsx";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
-import {Gsb} from "../pages/projects/gsb/index.jsx";
+import { Gsb } from "../pages/projects/gsb/index.jsx";
 import {Veille} from "../pages/veille/index.jsx";
 import Themetoggle from "../components/themetoggle/index.jsx";
-import React from "react";
 
 const AnimatedRoutes = withRouter(({ location }) => (
   <TransitionGroup>
@@ -23,13 +22,13 @@ const AnimatedRoutes = withRouter(({ location }) => (
       unmountOnExit
     >
       <Routes location={location}>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/portfolio" element={<Portfolio />} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/portfolio" element={<Portfolio />} />
           <Route path="/portfolio/gsb" element={<Gsb />} />
           <Route path="/contact" element={<ContactUs />} />
           <Route path="/veille" element={<Veille />} />
-        <Route path="*" element={<Home />} />
+          <Route path="*" element={<Home />} />
       </Routes>
     </CSSTransition>
   </TransitionGroup>
@@ -38,8 +37,8 @@ const AnimatedRoutes = withRouter(({ location }) => (
 function AppRoutes() {
   return (
     <div className="s_c">
-      <AnimatedRoutes />
-      <Socialicons />
+        <AnimatedRoutes />
+        <Socialicons />
         <Themetoggle />
     </div>
   );

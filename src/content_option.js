@@ -1,7 +1,7 @@
 const logotext = "DECHAMP";
 const meta = {
     title: "Dimitri Dechamp",
-    description: "I’m John Doe data scientist _ Full stack devloper,currently working in Berlin",
+    description: "Dimitri Dechamp - Développeur FullStack web et mobile",
 };
 
 const introdata = {

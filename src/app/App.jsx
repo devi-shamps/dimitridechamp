@@ -24,6 +24,7 @@ export default function App() {
     <Router basename={import.meta.env.VITE_APP_PUBLIC_URL}>
       <div className="cursor__dot">
           <AnimatedCursor
+              className="cursor"
               innerSize={7}
               trailingSpeed={5}
               outerSize={45}

@@ -18,11 +18,13 @@ export const Gsb = () => {
                 <div className="intro_secc d-block d-lg-flex align-items-center ">
                     <div className="project-info">
                         <h2>Galaxy Swiss Bourdin</h2>
+                        <p>PROJET DE DEUXIÈME ANNÉE DE BTS SIO</p>
                     </div>
                     <div
                         className="h_bg-image order-1 order-lg-2 h-100 "
                         style={{backgroundImage: `url(${photo})`}}
                     ></div>
+                    <div className="voile"></div>
                 </div>
             </section>
             <section id="first" className="first">
