@@ -20,7 +20,7 @@
     border-radius: 30px;
     width: 18px;
     border: none;
-    z-index: 4;
+    z-index: 7;
     height: 18px;
     transition: background-color 0.4s ease 0s;
 }

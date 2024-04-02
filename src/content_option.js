@@ -1,15 +1,15 @@
-const logotext = "DECHAMP";
+const logotext = "DIMITRI DECHAMP";
 const meta = {
     title: "Dimitri Dechamp",
-    description: "Dimitri Dechamp - Développeur FullStack web et mobile",
+    description: "Dimitri Dechamp - Bienvenue sur mon portfolio, où vous pouvez découvrir mes projets et compétences.",
 };
 
 const introdata = {
     title: "Salut, je suis Dimitri Dechamp !",
     animated: {
-        first: "J'aime coder ♥",
-        second: "Je crée des sites web magnifiques",
-        third: "Et je développe aussi des applications mobiles",
+        first: "Front-end",
+        second: "Back-end",
+        third: "FullStack developer. ♥",
     },
     description: "Je suis un étudiant doué en programmation, j'aime créer des sites web et des applications mobiles. " +
         "J'aime apprendre de nouvelles choses et relever de nouveaux défis. J'ai une grande expérience dans le développement web principalement. " +

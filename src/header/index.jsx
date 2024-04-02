@@ -3,7 +3,6 @@ import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
 import { logotext ,socialprofils } from "../content_option";
-import Themetoggle from "../components/themetoggle";
 
 const Headermain = () => {
   const [isActive, setActive] = useState("false");
@@ -17,9 +16,12 @@ const Headermain = () => {
     <>
       <header className="fixed-top site__header">
         <div className="d-flex align-items-center justify-content-between">
-          <Link  className="navbar-brand nav_logo" to="/">
-            {logotext}
+          <Link  className="navbar-brand home-logo" to="/" >
+            Home
           </Link>
+          <h1 className="navbar-brand nav_logo logo" >
+            {logotext}
+          </h1>
           <div className="d-flex align-items-center">
             <button className="menu__button  nav_ac" onClick={handleToggle}>
             {!isActive ? <VscClose /> : <VscGrabber />}

@@ -91,9 +91,8 @@
     width: 20px;
     position: fixed;
     height: 50px;
-    mix-blend-mode: difference;
     font-size: 1.55rem;
-    z-index: 3;
+    z-index: 7;
 }
 
 @media only screen and (max-width: 991px) {
