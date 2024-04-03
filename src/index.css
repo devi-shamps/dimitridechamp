@@ -4,13 +4,13 @@
 }
 
 :root {
-    --bg-color: #0c0c0c;
+    --bg-color: #000000;
     --primary-color: #0d0d0d;
     --secondary-color: #fff;
     --text-color: #fff;
     --color-home: #8a8a8a;
     --text-color-2: #fff;
-    --text-color-3: rgb(185, 184, 184);
+    --text-color-3: rgb(255, 255, 255);
     --overlay-color: rgb(12 12 12 / 63%);
 }
 
@@ -21,7 +21,7 @@
     --text-color: #000;
     --color-home: #000000;
     --text-color-2: #000;
-    --text-color-3: rgb(75, 75, 75);
+    --text-color-3: rgb(255, 255, 255);
     --overlay-color: rgb(255 255 255 / 70%);
 }
 
@@ -60,7 +60,7 @@ h6 {
 }
 
 a,
-a:hover {
+a:hover{
     color: var(--text-color);
 }
 
@@ -84,6 +84,7 @@ code {
 
 .cursor__dot div {
     z-index: 999999 !important;
+    mix-blend-mode: difference;
 }
 
 .cursor__dot div:last-child {
@@ -93,6 +94,7 @@ code {
 .cursor__dot div:first-child {
     border: 1px solid var(--text-color-3) !important;
 }
+
 
 
 .color_pr {

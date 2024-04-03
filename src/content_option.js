@@ -18,13 +18,18 @@ const introdata = {
 };
 
 const dataabout = {
-    title: "abit about my self",
-    aboutme: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis dolor id ligula semper elementum feugiat pretium nulla. Nunc non commodo dolor. Nunc mollis dignissim facilisis. Morbi ut magna ultricies.",
+    title: "Un peu plus sur moi",
+    aboutme: "Je suis Dimitri Dechamp, un étudiant passionné résidant à Annecy, une ville dont l'esthétique et la nature m'inspirent au quotidien. En tant que développeur web et mobile, je m'investis pleinement dans la création d'interfaces intuitives et élégantes, en conjuguant mes compétences de designer UX à ma sensibilité artistique. Chaque projet que j'entreprends est une occasion d'explorer de nouvelles perspectives et de relever de nouveaux défis, nourrissant ainsi ma passion pour le développement informatique."
 };
 const worktimeline = [{
-        jobtitle: "Développeur web",
+        jobtitle: "Application web Symfony",
         where: "MyLodge",
         date: "2024",
+    },
+    {
+        jobtitle: "Application web Wordpress",
+        where: "Linaven",
+        date: "2022",
     },
 ];
 

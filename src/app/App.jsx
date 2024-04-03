@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import {useEffect, useState} from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {
   BrowserRouter as Router,
@@ -25,30 +25,28 @@ export default function App() {
     <Router basename={import.meta.env.VITE_APP_PUBLIC_URL}>
       <div className="cursor__dot">
           <AnimatedCursor
-              className="cursor"
-              outerStyle={{
-                  mixBlendMode: 'difference',
-              }}
-              innerStyle={{
-                  mixBlendMode: 'difference',
-              }}
-              innerSize={7}
+              innerSize={9}
               trailingSpeed={5}
               outerSize={45}
               innerScale={1}
               outerScale={0.7}
               outerAlpha={0}
               showSystemCursor={true}
-              clickables={[
-                  'a',
+              clickables={ [
+                  '.hover-this',
                   {
-                      target: '.custom',
-                      options: {
-                          outerAlpha: 0.3,
-                      }
+                        target : '.hover-this',
+                        options : {
+                            innerSize: 15,
+                            outerSize: 45,
+                            color: '255, 255, 255',
+                            outerAlpha: 1,
+                            innerScale: 0,
+                            outerScale: 9
+                        }
                   }
-              ]}
-
+              ]
+              }
           />
       </div>
       <ScrollToTop>

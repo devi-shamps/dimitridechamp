@@ -16,7 +16,7 @@
 
 .clickthem {
     pointer-events: auto;
-    background-color: white;
+    background-color: var(--text-color);
     border-radius: 30px;
     width: 18px;
     border: none;

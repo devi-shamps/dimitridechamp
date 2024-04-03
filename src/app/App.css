@@ -41,11 +41,8 @@
     }
 }
 
-.cursor {
-    width: 40px;
-    height: 40px;
-    border: 1px solid var(--text-color);
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 900000;
+::selection {
+    color: black;
+    background: white;
 }
+
