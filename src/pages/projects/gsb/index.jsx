@@ -3,10 +3,11 @@ import {meta} from "../../../content_option.js";
 import "./style.css"
 import photo from "./gsb.png";
 import {Container} from "react-bootstrap";
+import transition from "../../../transition.jsx";
 
 
 
-export const Gsb = () => {
+const Gsb = () => {
     return (
         <HelmetProvider>
             <section id="first" className="first">
@@ -277,3 +278,5 @@ export const Gsb = () => {
         </HelmetProvider>
     )
 }
+
+export default transition(Gsb)

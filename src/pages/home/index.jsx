@@ -1,10 +1,36 @@
 import "./style.css";
+import "./home.scss";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import Typewriter from "typewriter-effect";
 import { introdata, meta } from "../../content_option";
-import { Link } from "react-router-dom";
+import projectData from "../../utils/projectData.js";
+import Title from "../../components/projects/Title.jsx";
+import Media from "../../components/projects/Media.jsx";
+import {useEffect, useState} from "react";
+import transition from "../../transition.jsx";
+import {Link} from "react-router-dom";
 
-export const Home = () => {
+const useMousePosition = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+
+  useEffect(() => {
+    const updateMousePosition = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', updateMousePosition);
+
+    return () => window.removeEventListener('mousemove', updateMousePosition);
+
+  }, []);
+
+  return mousePosition;
+};
+
+const Home = () => {
+  const [activeIndex, setActiveIndex] = useState(-1);
+  const { x, y } = useMousePosition();
+
   return (
     <HelmetProvider>
       <section id="home" className="home">
@@ -13,47 +39,22 @@ export const Home = () => {
           <title> {meta.title}</title>
           <meta name="description" content={meta.description} />
         </Helmet>
-        <div className="intro_sec d-block d-lg-flex align-items-center ">
-          <div className="text order-2 order-lg-1 h-100 d-lg-flex justify-content-center">
-            <div className="align-self-center ">
-              <div className="intro mx-auto">
-                <h2 className="mb-1x">{introdata.title}</h2>
-                <h1 className="fluidz-48 mb-1x">
-                  <Typewriter
-                    options={{
-                      strings: [
-                        introdata.animated.first,
-                        introdata.animated.second,
-                        introdata.animated.third,
-                      ],
-                      autoStart: true,
-                      loop: true,
-                      deleteSpeed: 10,
-                      delay: 60,
-                    }}
-                  />
-                </h1>
-                <p className="mb-1x">{introdata.description}</p>
-                <div className="intro_btn-action pb-5">
-                  <Link to="/portfolio" className="text_2">
-                    <div id="button_p" className="ac_btn btn ">
-                      Mon Portfolio
-                      <div className="ring one"></div>
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
-                    </div>
-                  </Link>
-                  <Link to="/contact">
-                    <div id="button_h" className="ac_btn btn">
-                      Contactez-moi
-                      <div className="ring one"></div>
-                      <div className="ring two"></div>
-                      <div className="ring three"></div>
-                    </div>
-                  </Link>
-                </div>
-              </div>
-            </div>
+        <div className="page-wrapper">
+          <div className="project-list">
+            {projectData.map(({title, to}, index) =>
+                <Link  to={to} >
+                  <Title title={title} setActiveIndex={setActiveIndex} index={index}/>
+                </Link>
+            )}
+          </div>
+
+          <div className="project-media">
+            {projectData.map(({mediaUrl}, index) => {
+              const isActive = index === activeIndex;
+              const xPos = isActive ? x : 0;
+              const yPos = isActive ? y : 0;
+              return <Media url={mediaUrl} active={isActive} x={xPos} y={yPos}/>
+            })}
           </div>
         </div>
 
@@ -61,3 +62,5 @@ export const Home = () => {
     </HelmetProvider>
   );
 };
+
+export default transition(Home);

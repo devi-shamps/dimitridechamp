@@ -1,4 +1,3 @@
-import React from "react";
 import "./style.css";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { Container, Row, Col } from "react-bootstrap";
@@ -11,9 +10,10 @@ import {
 } from "../../content_option";
 import Popup from "reactjs-popup";
 import { IoMdClose } from "react-icons/io";
+import transition from "../../transition.jsx";
 
 
-export const About = () => {
+const About = () => {
   const divStyle = {
     position: "relative",
     width: "100%",
@@ -147,3 +147,5 @@ export const About = () => {
     </HelmetProvider>
   );
 };
+
+export default transition(About);

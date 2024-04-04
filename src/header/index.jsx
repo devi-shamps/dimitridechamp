@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./style.css";
 import { VscGrabber, VscClose } from "react-icons/vsc";
 import { Link } from "react-router-dom";
@@ -14,7 +14,7 @@ const Headermain = () => {
 
   return (
     <>
-      <header className="fixed-top site__header">
+      <header className="fixed-top site__header" >
         <div className="d-flex align-items-center justify-content-between">
           <Link  className="navbar-brand home-logo" to="/" >
             Home
