@@ -6,6 +6,7 @@ import { ContactUs } from "../pages/contact/index.jsx";
 import About  from "../pages/about/index.jsx";
 import { Socialicons } from "../components/socialicons/index.jsx";
 import Gsb  from "../pages/projects/gsb/index.jsx";
+import Awoc from "../pages/projects/awoc/index.jsx";
 import {Veille} from "../pages/veille/index.jsx";
 import Themetoggle from "../components/themetoggle/index.jsx";
 
@@ -22,6 +23,7 @@ const AnimatedRoutes = withRouter(({ location }) => (
           <Route path="/veille" element={<Veille />} />
           <Route path="*" element={<Home />} />
           <Route path="/gsb" element={<Gsb />} />
+          <Route path="/awoc" element={<Awoc />} />
       </Routes>
     </AnimatePresence>
 ));

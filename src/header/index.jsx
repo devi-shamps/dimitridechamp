@@ -22,11 +22,16 @@ const Headermain = () => {
           <h1 className="navbar-brand nav_logo logo" >
             {logotext}
           </h1>
+          <Link  className="navbar-brand home-logo" to="/about" >
+            About
+          </Link>
+          {/*
           <div className="d-flex align-items-center">
             <button className="menu__button  nav_ac" onClick={handleToggle}>
-            {!isActive ? <VscClose /> : <VscGrabber />}
-          </button>
+              {!isActive ? <VscClose /> : <VscGrabber />}
+            </button>
           </div>
+           */}
         </div>
 
         <div className={`site__navigation ${!isActive ? "menu__opend" : ""}`}>

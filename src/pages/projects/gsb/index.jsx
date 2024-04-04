@@ -1,37 +1,55 @@
 import {Helmet, HelmetProvider} from "react-helmet-async";
 import {meta} from "../../../content_option.js";
 import "./style.css"
-import photo from "./gsb.png";
+import { gsap } from 'gsap';
+import { useEffect, useRef } from 'react';
 import {Container} from "react-bootstrap";
 import transition from "../../../transition.jsx";
-
-
+import next from "./gsb.png";
 
 const Gsb = () => {
+    const projectInfoRef1 = useRef(null);
+    const projectInfoRef2 = useRef(null);
+
+    useEffect(() => {
+        gsap.from(projectInfoRef1.current, {
+            duration: 0.5,
+            opacity: 0,
+            y: '+50px',
+            ease: 'power1.out'
+        });
+
+        gsap.from(projectInfoRef2.current, {
+            delay: 0.5, // delay of 0.5 seconds
+            duration: 0.5,
+            opacity: 0,
+            y: '+60px',
+            ease: 'power1.out'
+        });
+    }, []);
+
     return (
         <HelmetProvider>
+            <Helmet>
+                <meta charSet="utf-8"/>
+                <title> GSB - {meta.title} </title>{" "}
+                <meta name="description" content={meta.description}/>
+            </Helmet>
             <section id="first" className="first">
-                <Helmet>
-                    <meta charSet="utf-8"/>
-                    <title> GSB | {meta.title} </title>{" "}
-                    <meta name="description" content={meta.description}/>
-                </Helmet>
-
-                <div className="intro_secc d-block d-lg-flex align-items-center ">
-                    <div className="project-info">
-                        <h2>Galaxy Swiss Bourdin</h2>
-                        <p>PROJET DE DEUXIÈME ANNÉE DE BTS SIO</p>
+                <div className="container">
+                    <div className="row">
+                        <div className="project-info">
+                            <p ref={projectInfoRef1}>
+                                <span>
+                                    Galaxy Swiss Bourdin
+                                </span>
+                            </p>
+                            <p ref={projectInfoRef2}>PROJET DE DEUXIEME ANNEE DE BTS SIO</p>
+                        </div>
                     </div>
-                    <div
-                        className="h_bg-image order-1 order-lg-2 h-100 "
-                        style={{backgroundImage: `url(${photo})`}}
-                    ></div>
-                    <div className="voile"></div>
                 </div>
             </section>
-
-
-            <section id="first" className="first">
+            <section id="second" className="second">
                 <Container>
                     <p>Lorem ipsumContrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte
                         aléatoire.
@@ -273,7 +291,17 @@ const Gsb = () => {
                         (1914).</p>
                 </Container>
             </section>
-
+            <a className="next-project" href="/awoc">
+                <img src="https://www.cathydolle.com/assets/Poterie.fcab0f47.jpg" alt='A Week Of Culture'/>
+                <div className="voile"></div>
+                <div className="block"></div>
+                <div className="text-h1">
+                    Ceramic
+                    <h4 className="text-h4">
+                        Next Project
+                    </h4>
+                </div>
+            </a>
 
         </HelmetProvider>
     )
