@@ -1,14 +1,15 @@
 section {
-    height: 100vh; /* Hauteur de la fenêtre de visualisation */
+    height: auto; /* Hauteur de la fenêtre de visualisation */
     width: 100%; /* Largeur de la fenêtre de visualisation */
     background-color: white;
     color: black;
+    overflow: hidden;
 }
 
 .first {
     position: relative;
     height: 100vh;
-    width: 100%;
+    width: auto;
     background-color: white;
     color: black;
     display: flex;
@@ -18,20 +19,40 @@ section {
 }
 
 .project-info p span{
-    font-size: 15rem;
+    font-size: 13vw; /* Ajustez cette valeur en fonction de vos besoins */
     font-family: "Six Caps", system-ui;
     font-weight: 500;
     font-variation-settings: normal;
     font-style: normal;
+    transition: font-size 0.3s ease-in-out;
 }
 .project-info p{
-    font-size: 3rem;
+    font-size: 2.5vw; /* Ajustez cette valeur en fonction de vos besoins */
     font-family: "Libre Barcode 128 Text", system-ui;
     font-weight: 400;
     font-style: normal;
+    transition: font-size 0.3s ease-in-out;
+}
+
+@media only screen and (max-width: 991px) {
+    .project-info p span {
+        font-size: 15vw;
+    }
+    .project-info p {
+        font-size: 5vw;
+    }
 }
 
 .bite {
     background-color: white;
 }
+.text-description {
+    font-family: Inconsolata;
+    font-size: 18px;
+    color: gray;
+}
+.second img{
+    height: auto; /* Hauteur de la fenêtre de visualisation */
+    width: 100%; /* Largeur de la fenêtre de visualisation */
 
+}

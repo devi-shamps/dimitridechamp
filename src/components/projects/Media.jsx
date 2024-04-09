@@ -19,6 +19,11 @@ const useSize = () => {
         if (node) {
             const measure = () => setDimensions(getDimensionObject(node));
             measure();
+            window.addEventListener('mousemove', measure);
+
+            return () => {
+                window.removeEventListener('mousemove', measure);
+            };
         }
     }, [node]);
     return [ref, dimensions];

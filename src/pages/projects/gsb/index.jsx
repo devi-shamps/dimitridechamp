@@ -1,13 +1,18 @@
 import {Helmet, HelmetProvider} from "react-helmet-async";
 import {meta} from "../../../content_option.js";
 import "./style.css"
-import { gsap } from 'gsap';
+import { gsap} from 'gsap';
 import { useEffect, useRef } from 'react';
 import {Container} from "react-bootstrap";
 import transition from "../../../transition.jsx";
-import next from "./gsb.png";
+import {Link} from "react-router-dom";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Gsb = () => {
+
+
     const projectInfoRef1 = useRef(null);
     const projectInfoRef2 = useRef(null);
 
@@ -35,273 +40,55 @@ const Gsb = () => {
                 <title> GSB - {meta.title} </title>{" "}
                 <meta name="description" content={meta.description}/>
             </Helmet>
-            <section id="first" className="first">
-                <div className="container">
-                    <div className="row">
-                        <div className="project-info">
-                            <p ref={projectInfoRef1}>
+            <div id="my-scrollbar" style={{height: '100vh'}}>
+
+                <section id="first" className="first">
+                    <div className="container">
+                        <div className="row">
+                            <div className="project-info">
+                                <p ref={projectInfoRef1}>
                                 <span>
                                     Galaxy Swiss Bourdin
                                 </span>
-                            </p>
-                            <p ref={projectInfoRef2}>PROJET DE DEUXIEME ANNEE DE BTS SIO</p>
+                                </p>
+                                <p ref={projectInfoRef2}>PROJET DE DEUXIEME ANNEE DE BTS SIO</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </section>
-            <section id="second" className="second">
-                <Container>
-                    <p>Lorem ipsumContrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte
-                        aléatoire.
-                        Il trouve ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C.,
-                        le
-                        rendant vieux de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé
-                        à un
-                        des mots latins les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en
-                        étudiant tous
-                        les usages de ce mot dans la littérature classique, découvrit la source incontestable du Lorem
-                        Ipsum. Il
-                        provient en fait des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des
-                        Suprêmes Biens
-                        et des Suprêmes Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un
-                        traité sur
-                        la théorie de l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...",
-                        proviennent de la section 1.10.32.
+                </section>
 
-                        L'extrait standard de Lorem Ipsum utilisé depuis le XVIè siècle est reproduit ci-dessous pour
-                        les
-                        curieux. Les sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron sont
-                        aussi
-                        reproduites dans leur version originale, accompagnée de la traduction anglaise de H. Rackham
-                        (1914).
-                        Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il
-                        trouve
-                        ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le
-                        rendant vieux
-                        de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots
-                        latins
-                        les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les
-                        usages de ce
-                        mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient
-                        en fait
-                        des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des
-                        Suprêmes
-                        Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la
-                        théorie de
-                        l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de
-                        la
-                        section 1.10.32.
+                <section id="second" className="second">
+                    <Container>
+                        <div className="row">
+                            <div className="col-md-6">
+                                <p className="text-description">Le projet GSB est un projet de deuxième année de BTS SIO. Il consiste à créer une application web pour la gestion des frais de déplacement des visiteurs médicaux. L'application est composée de deux parties : une partie visiteur et une partie administrateur. La partie visiteur permet aux visiteurs médicaux de saisir leurs frais de déplacement et de les envoyer à l'administrateur pour validation. La partie administrateur permet à l'administrateur de valider les frais de déplacement des visiteurs médicaux et de les envoyer à la comptabilité pour remboursement.</p>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="col-md-12 pt-5">
+                                <img src="/public/images/awocWeb.png" alt="GSB"/>
+                            </div>
+                        </div>
+                    </Container>
+                    <div className="endScroll">
+                        <h2 className="text-h2 serif">Thanks for scrolling</h2>
+                        <p className="text-description">Project made with fun and love</p>
+                        <div className="spacer"></div>
+                    </div>
+                </section>
 
-                        L'extrait standard de Lorem Ipsum utilisé depuis le XVIè siècle est reproduit ci-dessous pour
-                        les
-                        curieux. Les sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron sont
-                        aussi
-                        reproduites dans leur version originale, accompagnée de la traduction anglaise de H. Rackham
-                        (1914).
-                        Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il
-                        trouve
-                        ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le
-                        rendant vieux
-                        de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots
-                        latins
-                        les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les
-                        usages de ce
-                        mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient
-                        en fait
-                        des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des
-                        Suprêmes
-                        Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la
-                        théorie de
-                        l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de
-                        la
-                        section 1.10.32.
-
-                        L'extrait standard de Lorem Ipsum utilisé depuis le XVIè siècle est reproduit ci-dessous pour
-                        les
-                        curieux. Les sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron sont
-                        aussi
-                        reproduites dans leur version originale, accompagnée de la traduction anglaise de H. Rackham
-                        (1914).
-                        Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il
-                        trouve
-                        ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le
-                        rendant vieux
-                        de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots
-                        latins
-                        les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les
-                        usages de ce
-                        mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient
-                        en fait
-                        des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des
-                        Suprêmes
-                        Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la
-                        théorie de
-                        l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de
-                        la
-                        section 1.10.32.
-
-                        L'extrait standard de Lorem Ipsum utilisé depuis le XVIè siècle est reproduit ci-dessous pour
-                        les
-                        curieux. Les sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron sont
-                        aussi
-                        reproduites dans leur version originale, accompagnée de la traduction anglaise de H. Rackham
-                        (1914).
-                        Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il
-                        trouve
-                        ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le
-                        rendant vieux
-                        de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots
-                        latins
-                        les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les
-                        usages de ce
-                        mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient
-                        en fait
-                        des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des
-                        Suprêmes
-                        Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la
-                        théorie de
-                        l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de
-                        la
-                        section 1.10.32.
-
-                        L'extrait standard de Lorem Ipsum utilisé depuis le XVIè siècle est reproduit ci-dessous pour
-                        les
-                        curieux. Les sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron sont
-                        aussi
-                        reproduites dans leur version originale, accompagnée de la traduction anglaise de H. Rackham
-                        (1914).
-                        Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il
-                        trouve
-                        ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le
-                        rendant vieux
-                        de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots
-                        latins
-                        les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les
-                        usages de ce
-                        mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient
-                        en fait
-                        des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des
-                        Suprêmes
-                        Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la
-                        théorie de
-                        l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de
-                        la
-                        section 1.10.32.
-
-                        L'extrait standard de Lorem Ipsum utilisé depuis le XVIè siècle est reproduit ci-dessous pour
-                        les
-                        curieux. Les sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron sont
-                        aussi
-                        reproduites dans leur version originale, accompagnée de la traduction anglaise de H. Rackham
-                        (1914).
-                        Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il
-                        trouve
-                        ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le
-                        rendant vieux
-                        de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots
-                        latins
-                        les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les
-                        usages de ce
-                        mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient
-                        en fait
-                        des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des
-                        Suprêmes
-                        Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la
-                        théorie de
-                        l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de
-                        la
-                        section 1.10.32.
-
-                        L'extrait standard de Lorem Ipsum utilisé depuis le XVIè siècle est reproduit ci-dessous pour
-                        les
-                        curieux. Les sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron sont
-                        aussi
-                        reproduites dans leur version originale, accompagnée de la traduction anglaise de H. Rackham
-                        (1914).
-                        Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il
-                        trouve
-                        ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le
-                        rendant vieux
-                        de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots
-                        latins
-                        les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les
-                        usages de ce
-                        mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient
-                        en fait
-                        des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des
-                        Suprêmes
-                        Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la
-                        théorie de
-                        l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de
-                        la
-                        section 1.10.32.
-
-                        L'extrait standard de Lorem Ipsum utilisé depuis le XVIè siècle est reproduit ci-dessous pour
-                        les
-                        curieux. Les sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron sont
-                        aussi
-                        reproduites dans leur version originale, accompagnée de la traduction anglaise de H. Rackham
-                        (1914).
-                        Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il
-                        trouve
-                        ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le
-                        rendant vieux
-                        de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots
-                        latins
-                        les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les
-                        usages de ce
-                        mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient
-                        en fait
-                        des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des
-                        Suprêmes
-                        Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la
-                        théorie de
-                        l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de
-                        la
-                        section 1.10.32.
-
-                        L'extrait standard de Lorem Ipsum utilisé depuis le XVIè siècle est reproduit ci-dessous pour
-                        les
-                        curieux. Les sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron sont
-                        aussi
-                        reproduites dans leur version originale, accompagnée de la traduction anglaise de H. Rackham
-                        (1914).
-                        Contrairement à une opinion répandue, le Lorem Ipsum n'est pas simplement du texte aléatoire. Il
-                        trouve
-                        ses racines dans une oeuvre de la littérature latine classique datant de 45 av. J.-C., le
-                        rendant vieux
-                        de 2000 ans. Un professeur du Hampden-Sydney College, en Virginie, s'est intéressé à un des mots
-                        latins
-                        les plus obscurs, consectetur, extrait d'un passage du Lorem Ipsum, et en étudiant tous les
-                        usages de ce
-                        mot dans la littérature classique, découvrit la source incontestable du Lorem Ipsum. Il provient
-                        en fait
-                        des sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" (Des Suprêmes Biens et des
-                        Suprêmes
-                        Maux) de Cicéron. Cet ouvrage, très populaire pendant la Renaissance, est un traité sur la
-                        théorie de
-                        l'éthique. Les premières lignes du Lorem Ipsum, "Lorem ipsum dolor sit amet...", proviennent de
-                        la
-                        section 1.10.32.
-                        L'extrait standard de Lorem Ipsum utilisé depuis le XVIè siècle est reproduit ci-dessous pour
-                        les
-                        curieux. Les sections 1.10.32 et 1.10.33 du "De Finibus Bonorum et Malorum" de Cicéron sont
-                        aussi
-                        reproduites dans leur version originale, accompagnée de la traduction anglaise de H. Rackham
-                        (1914).</p>
-                </Container>
-            </section>
-            <a className="next-project" href="/awoc">
-                <img src="https://www.cathydolle.com/assets/Poterie.fcab0f47.jpg" alt='A Week Of Culture'/>
-                <div className="voile"></div>
-                <div className="block"></div>
-                <div className="text-h1">
-                    Ceramic
-                    <h4 className="text-h4">
-                        Next Project
-                    </h4>
-                </div>
-            </a>
+                <Link className="next-project" to="/awoc">
+                    <img src="https://www.cathydolle.com/assets/Poterie.fcab0f47.jpg" alt='A Week Of Culture'/>
+                    <div className="voile"></div>
+                    <div className="block"></div>
+                    <div className="text-h1">
+                        GSB Mobile
+                        <h4 className="text-h4">
+                            Porjet suivant
+                        </h4>
+                    </div>
+                </Link>
+            </div>
 
         </HelmetProvider>
     )

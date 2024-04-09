@@ -31,6 +31,7 @@ body {
     height: 100%;
     scrollbar-width: none;
     cursor: none;
+    overflow: hidden;
 }
 
 body {
@@ -152,3 +153,25 @@ code {
     opacity: 0.7;
     font-size: 16px;
 }
+
+.endScroll {
+    padding: 9em 10vw;
+    width: 100%;
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.endScroll .text-h2.serif {
+    font-family: Ginger;
+    font-size: 5em;
+    font-weight: 300;
+}
+.endScroll p {
+    color: gray;
+    width: 400px;
+}
+

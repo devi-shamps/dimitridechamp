@@ -12,29 +12,27 @@ const Headermain = () => {
     document.body.classList.toggle("ovhidden");
   };
 
+
   return (
     <>
       <header className="fixed-top site__header" >
         <div className="d-flex align-items-center justify-content-between">
-          <Link  className="navbar-brand home-logo" to="/" >
+          <Link className="navbar-brand home-logo desktop-only" to="/">
             Home
           </Link>
-          <h1 className="navbar-brand nav_logo logo" >
+          <h1 className="navbar-brand nav_logo logo">
             {logotext}
           </h1>
-          <Link  className="navbar-brand home-logo" to="/about" >
+          <Link className="navbar-brand home-logo desktop-only" to="/about">
             About
           </Link>
-          {/*
-          <div className="d-flex align-items-center">
-            <button className="menu__button  nav_ac" onClick={handleToggle}>
-              {!isActive ? <VscClose /> : <VscGrabber />}
-            </button>
-          </div>
-           */}
+
+          <button className="menu__button  nav_ac mobile-only" onClick={handleToggle}>
+            {!isActive ? <VscClose/> : <VscGrabber/>}
+          </button>
         </div>
 
-        <div className={`site__navigation ${!isActive ? "menu__opend" : ""}`}>
+        <div className={`site__navigation ${!isActive ? "menu__opend" : ""}`} >
           <div className="bg__menu h-100">
             <div className="menu__wrapper">
               <div className="menu__container p-3">
@@ -69,7 +67,7 @@ const Headermain = () => {
         </div>
       </header>
 
-      
+
     </>
   );
 };
