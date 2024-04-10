@@ -40,3 +40,8 @@
     background: white;
 }
 
+@media (max-width: 992px) {
+    .cursor__dot {
+        display: none;
+    }
+}

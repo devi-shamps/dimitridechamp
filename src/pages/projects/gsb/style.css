@@ -43,16 +43,40 @@ section {
     }
 }
 
-.bite {
-    background-color: white;
-}
 .text-description {
     font-family: Inconsolata;
     font-size: 18px;
     color: gray;
 }
+.text-infoprojet {
+    font-family: Inconsolata;
+    font-size: 18px;
+    font-weight: 600;
+    color: black;
+}
 .second img{
     height: auto; /* Hauteur de la fenêtre de visualisation */
     width: 100%; /* Largeur de la fenêtre de visualisation */
 
+}
+
+.parent {
+    padding-left: 12rem;
+    padding-right: 12rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5rem 10rem;
+}
+
+.div1 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+.div2 {
+    grid-column: 3 / 3;
+    grid-row: 1 / 2;
+}
+.div3 {
+    grid-column: 1 / 4;
+    grid-row: 2 / 2;
 }

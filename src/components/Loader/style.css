@@ -1,0 +1,102 @@
+.loader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    font-size: 5vw; /* Utilisation de vw pour la taille de la police */
+}
+
+.loader-text {
+    width: 100%;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.slide-in-left {
+    opacity: 0;
+    transform: translateX(-100%);
+    animation: slideLeft 2.5s forwards;
+}
+
+.slide-in-right {
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slideRight 2s forwards;
+    animation-delay: 0.5s;
+
+}
+@keyframes slideLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    75% {
+        opacity: 1;
+        transform: translateX(-4.5%);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%) translateX(-4.5%);
+    }
+
+}
+
+@keyframes slideRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    75% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-145%);
+    }
+}
+
+.loading-barr {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 10px;
+    width: 0;
+    background: white;
+    border-radius: 12px;
+    animation: loading 2s linear forwards;
+}
+
+@keyframes loading {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+/* Utilisation des media queries pour ajuster la taille de la police et les valeurs de transform en fonction de la taille de l'écran */
+@media (max-width: 600px) {
+    .loader {
+        font-size: 6.5vw;
+    }
+}
+
+.loader-exit {
+    animation: exit 1s forwards;
+}
+
+@keyframes exit {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+.loader.loader-exit .loading-barr {
+    opacity: 0;
+    transition: opacity 0.01s;
+}

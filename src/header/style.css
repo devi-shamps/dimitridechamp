@@ -4,10 +4,19 @@
     padding: 2em 5em;
     font-family: "Bebas Neue", sans-serif;
     mix-blend-mode: difference;
-
+}
+@media screen and (max-width: 992px) {
+    .site__header {
+        padding: 2em 2em;
+    }
 }
 
-
+.contact-link {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 3em 2em;
+}
 .logo {
     font-family: "Bebas Neue", sans-serif;
 }

@@ -26,7 +26,9 @@ const Headermain = () => {
           <Link className="navbar-brand home-logo desktop-only" to="/about">
             About
           </Link>
-
+          <Link className="navbar-brand home-logo desktop-only contact-link" to="/contact">
+            Contact
+          </Link>
           <button className="menu__button  nav_ac mobile-only" onClick={handleToggle}>
             {!isActive ? <VscClose/> : <VscGrabber/>}
           </button>

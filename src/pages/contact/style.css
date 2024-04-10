@@ -11,6 +11,9 @@
     margin-bottom: 2em;
     height: calc(2.5em + .75rem + 2px);
 }
+.contact__form input::placeholder, .contact__form textarea::placeholder {
+    color: #a8a8a8;
+}
 
 button.btn.ac_btn:hover {
     color: var(--secondary-color);
@@ -41,5 +44,18 @@ button.btn.ac_btn:hover {
     }
     100% {
         transform: translateX(100%);
+    }
+}
+
+.margin-top {
+    margin-top: 20%;
+}
+@media only screen and (max-width: 991px) {
+    .margin-top {
+        margin-top: 30%;
+    }
+
+    .container {
+        padding: 5rem;
     }
 }
