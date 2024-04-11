@@ -1,22 +1,22 @@
 export default [
-    {
-        title : 'Gsb',
-        to : '/gsb',
-        mediaUrl : 'public/images/gsbWeb.png',
-    },
-    {
-        title : 'Gsb mobile',
-        to : '/gsbMobile',
-        mediaUrl : 'public/images/gsbHome.png',
-    },
-    {
-        title : 'Awoc',
-        to : '/awoc',
-        mediaUrl : 'public/images/awocWeb.png',
-    },
-    {
-        title : 'Endima',
-        to : '/endima',
-        mediaUrl : 'https://www.w3schools.com/w3images/forestbridge.jpg',
-    }
-]
+  {
+    title: "Gsb",
+    to: "/gsb",
+    mediaUrl: "images/gsbweb.png",
+  },
+  {
+    title: "Gsb mobile",
+    to: "/gsbMobile",
+    mediaUrl: "/images/gsbHome.png",
+  },
+  {
+    title: "Awoc",
+    to: "/awoc",
+    mediaUrl: "/images/awocWeb.png",
+  },
+  {
+    title: "Endima",
+    to: "/endima",
+    mediaUrl: "https://www.w3schools.com/w3images/forestbridge.jpg",
+  },
+];
