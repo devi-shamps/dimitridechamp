@@ -61,8 +61,8 @@ section {
 }
 
 .parent {
-    padding-left: 12rem;
-    padding-right: 12rem;
+    padding-left: 14vh;
+    padding-right: 14vh;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem 10rem;
@@ -79,4 +79,30 @@ section {
 .div3 {
     grid-column: 1 / 4;
     grid-row: 2 / 2;
+}
+.div4 {
+    grid-column: 1 / 4;
+    grid-row: 3 / 3;
+}
+
+@media (max-width: 992px) {
+    .parent {
+        padding-right: 2rem;
+        padding-left: 2rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-auto-rows: auto;
+        gap: 1.2rem 1.2rem;
+    }
+
+    .div1, .div2, .div3, .div4{
+        grid-column: 1 / 2;
+        overflow: auto;
+        grid-row: auto;
+    }
+}
+
+.acceuilGsb {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius: 20px;
 }

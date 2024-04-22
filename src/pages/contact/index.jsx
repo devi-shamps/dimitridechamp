@@ -34,7 +34,7 @@ const ContactUs = () => {
         contactConfig.YOUR_SERVICE_ID,
         contactConfig.YOUR_TEMPLATE_ID,
         templateParams,
-        contactConfig.YOUR_USER_ID
+        contactConfig.YOUR_USER_ID,
       )
       .then(
         (result) => {
@@ -54,7 +54,7 @@ const ContactUs = () => {
             show: true,
           });
           document.getElementsByClassName("co_alert")[0].scrollIntoView();
-        }
+        },
       );
   };
 
@@ -67,7 +67,7 @@ const ContactUs = () => {
 
   return (
     <HelmetProvider>
-      <Container >
+      <Container className="fontContact contactPadding">
         <Helmet>
           <meta charSet="utf-8" />
           <title>{meta.title} | Contact</title>
@@ -75,7 +75,7 @@ const ContactUs = () => {
         </Helmet>
         <Row className="mb-5 margin-top">
           <Col lg="8">
-            <h1 className="display-4 mb-4">Me Contacter</h1>
+            <h1 className="display-4 mb-4 title">Me Contacter</h1>
             <hr className="t_border my-4 ml-0 text-left" />
           </Col>
         </Row>
@@ -93,8 +93,10 @@ const ContactUs = () => {
               <p className="my-0">{formData.alertmessage}</p>
             </Alert>
           </Col>
-          <Col lg="5" className="mb-5">
-            <h3 className="color_sec py-4">Get in touch</h3>
+          <Col lg="5" className="mb-5 cursorNone">
+            <h3 className="color_sec py-4 fontContact">
+              Vous pouvez me contacter :
+            </h3>
             <address>
               <strong>Email:</strong>{" "}
               <a href={`mailto:${contactConfig.YOUR_EMAIL}`}>
@@ -104,7 +106,7 @@ const ContactUs = () => {
               <br />
               {contactConfig.hasOwnProperty("YOUR_FONE") ? (
                 <p>
-                  <strong>Phone:</strong> {contactConfig.YOUR_FONE}
+                  <strong>Télephone:</strong> {contactConfig.YOUR_FONE}
                 </p>
               ) : (
                 ""
@@ -154,7 +156,7 @@ const ContactUs = () => {
               <Row>
                 <Col lg="12" className="form-group">
                   <button className="btn ac_btn" type="submit">
-                    {formData.loading ? "Sending..." : "Send"}
+                    {formData.loading ? "Sending..." : "Envoyez"}
                   </button>
                 </Col>
               </Row>
@@ -167,4 +169,4 @@ const ContactUs = () => {
   );
 };
 
-export default transition(ContactUs)
+export default transition(ContactUs);

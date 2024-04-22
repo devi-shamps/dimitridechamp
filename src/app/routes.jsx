@@ -33,7 +33,7 @@ function AppRoutes() {
     <div className="s_c">
       <AnimatedRoutes />
       <Socialicons />
-      <Themetoggle />
+      {/*<Themetoggle /> BOUTON THEME*/}
     </div>
   );
 }

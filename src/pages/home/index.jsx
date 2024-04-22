@@ -1,14 +1,14 @@
 import "./style.css";
 import "./home.scss";
-import { gsap } from 'gsap';
+import { gsap } from "gsap";
 import { Helmet, HelmetProvider } from "react-helmet-async";
 import { meta } from "../../content_option";
 import projectData from "../../utils/projectData.js";
 import Title from "../../components/projects/Title.jsx";
 import Media from "../../components/projects/Media.jsx";
-import {useEffect, useRef, useState} from "react";
+import { useEffect, useRef, useState } from "react";
 import transition from "../../transition.jsx";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const useMousePosition = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -18,10 +18,9 @@ const useMousePosition = () => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
-    window.addEventListener('mousemove', updateMousePosition);
+    window.addEventListener("mousemove", updateMousePosition);
 
-    return () => window.removeEventListener('mousemove', updateMousePosition);
-
+    return () => window.removeEventListener("mousemove", updateMousePosition);
   }, []);
 
   return mousePosition;
@@ -43,8 +42,8 @@ const Home = () => {
         delay: index * 0.5, // delay increases for each project
         duration: 1.5,
         opacity: 0,
-        y: '+60px',
-        ease: 'power1.out'
+        y: "+60px",
+        ease: "power1.out",
       });
     });
   }, []);
@@ -62,23 +61,28 @@ const Home = () => {
         </Helmet>
         <div className="page-wrapper">
           <div className="project-list">
-            {projectData.map(({title, to}, index) =>
-                <Link  to={to} ref={addToRefs}>
-                  <Title title={title} setActiveIndex={setActiveIndex} index={index}/>
-                </Link>
-            )}
+            {projectData.map(({ title, to }, index) => (
+              <Link to={to} ref={addToRefs}>
+                <Title
+                  title={title}
+                  setActiveIndex={setActiveIndex}
+                  index={index}
+                />
+              </Link>
+            ))}
           </div>
-
+          <div className="design-elements"></div>
           <div className="project-media">
-            {projectData.map(({mediaUrl}, index) => {
+            {projectData.map(({ mediaUrl }, index) => {
               const isActive = index === activeIndex;
               const xPos = isActive ? x : 0;
               const yPos = isActive ? y : 0;
-              return <Media url={mediaUrl} active={isActive} x={xPos} y={yPos}/>
+              return (
+                <Media url={mediaUrl} active={isActive} x={xPos} y={yPos} />
+              );
             })}
           </div>
         </div>
-
       </section>
     </HelmetProvider>
   );

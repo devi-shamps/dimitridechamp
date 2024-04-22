@@ -21,16 +21,16 @@
 
   display: flex;
   align-items: center;
-  justify-content: center; // Ajouté pour centrer horizontalement
-  flex-direction: column; // Ajouté pour placer les éléments l'un en dessous de l'autre
+  justify-content: center;
+  flex-direction: column;
 
   box-sizing: border-box;
   position: relative;
 }
 
 .project-list {
-  mix-blend-mode: difference;
-  width: 100%; // Ajouté pour prendre toute la largeur disponible
+  mix-blend-mode: lighten;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,7 +79,7 @@
       cursor: none;
 
       @media screen and (min-width: 768px) and (max-width: 991.98px) {
-        font-size: 11rem ;
+        font-size: 11rem !important;
       }
       @media screen and (min-width: 544px) and (max-width: 767.98px)  {
         font-size: 8.88888888888889rem !important;
@@ -120,3 +120,36 @@
   }
 
 }
+
+.loaderr {
+  display: flex;
+  position: relative;
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  top: 50vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.containerr {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  position: relative;
+  align-items: center;
+}
+
+.carousell {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  transform-origin: center;
+}
+

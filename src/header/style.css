@@ -4,6 +4,7 @@
     padding: 2em 5em;
     font-family: "Bebas Neue", sans-serif;
     mix-blend-mode: difference;
+    cursor: none;
 }
 @media screen and (max-width: 992px) {
     .site__header {
@@ -197,6 +198,7 @@
     font-weight: 500;
     z-index: 1000;
     letter-spacing: 1px;
+    cursor: none;
 }
 
 

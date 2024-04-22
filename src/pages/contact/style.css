@@ -55,7 +55,15 @@ button.btn.ac_btn:hover {
         margin-top: 30%;
     }
 
-    .container {
+    .contactPadding {
         padding: 5rem;
     }
+}
+
+.fontContact {
+    font-family: "Inconsolata", monospace;
+}
+
+.cursorNone a {
+    cursor: none;
 }

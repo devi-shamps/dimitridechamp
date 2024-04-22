@@ -7,6 +7,8 @@ import { Container } from "react-bootstrap";
 import transition from "../../../transition.jsx";
 import { Link } from "react-router-dom";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import acceuilGsb from "./gsb.png";
+import nextProject from "/public/images/gsbHome.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -69,6 +71,15 @@ const Gsb = () => {
             </div>
             <div className="div2">
               <p className="text-infoprojet">
+                Porjet : BTS <br />
+                Travail: Autonomie
+              </p>
+            </div>
+            <div className="div3">
+              <img src={acceuilGsb} className="acceuilGsb" alt="GSB" />
+            </div>
+            <div className="div4">
+              <p className="text-description">
                 J'ai utilisé le cahier des charges comme guide essentiel pour
                 définir rigoureusement les besoins des utilisateurs garantissant
                 ainsi que chaque aspect de l'application réponde de manière
@@ -79,24 +90,16 @@ const Gsb = () => {
                 Compréhension des besoins Méthodologie SCRUM Rejoignez-moi
               </p>
             </div>
-            <div className="div3">
-              <img src="/public/images/awocWeb.png" alt="GSB" />
-            </div>
           </div>
           <div className="endScroll">
             <h2 className="text-h2 serif">Merci d'avoir regardé !</h2>
-            <p className="text-description">
-              Un projet qui à été créer en équipe avec bonne humeur
-            </p>
+            <p className="text-description">Un projet fun et ludique</p>
             <div className="spacer"></div>
           </div>
         </section>
 
         <Link className="next-project" to="/awoc">
-          <img
-            src="https://www.cathydolle.com/assets/Poterie.fcab0f47.jpg"
-            alt="A Week Of Culture"
-          />
+          <img src={nextProject} alt="Galaxy Swiss Borudin Mobile" />
           <div className="voile"></div>
           <div className="block"></div>
           <div className="text-h1">

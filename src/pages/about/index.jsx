@@ -12,7 +12,6 @@ import Popup from "reactjs-popup";
 import { IoMdClose } from "react-icons/io";
 import transition from "../../transition.jsx";
 
-
 const About = () => {
   const divStyle = {
     position: "relative",
@@ -25,7 +24,7 @@ const About = () => {
     marginBottom: "0.9em",
     overflow: "hidden",
     borderRadius: "8px",
-    willChange: "transform"
+    willChange: "transform",
   };
 
   const iframeStyle = {
@@ -36,42 +35,60 @@ const About = () => {
     left: 0,
     border: "none",
     padding: 0,
-    margin: 0
+    margin: 0,
   };
 
   return (
     <HelmetProvider>
+      <div className="custom-shape-divider-top-1712911821">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            className="shape-fill"
+          ></path>
+        </svg>
+      </div>
       <Container className="About-header">
         <Helmet>
           <meta charSet="utf-8" />
           <title> About | {meta.title}</title>
           <meta name="description" content={meta.description} />
         </Helmet>
-        <Row className="mb-5 mt-5 pt-md-3">
+
+        <Row className="mb-5 margin-topp pt-md-3">
           <Col lg="8">
             <h1 className="display-4 mb-2 title">A propos de moi</h1>
             <Popup
-                trigger={<span className="button hover-this"> DOWNLOAD MY RESUME </span>}
-                modal
-                closeOnDocumentClick
+              trigger={
+                <span className="button hover-this"> DOWNLOAD MY RESUME </span>
+              }
+              modal
+              closeOnDocumentClick
             >
-              {close => (
-                  <div className="custom-modal">
-                    <p>SCROLL DOWN</p>
-                    <div style={divStyle}>
-                      <iframe loading="lazy"
-                              style={iframeStyle}
-                              src="https://www.canva.com/design/DAGBWwoDXik/S0qAwj9rnl6eJVDtm8bGMw/view?embed"
-                              allowFullScreen="allowfullscreen" allow="fullscreen">
-                      </iframe>
-                    </div>
-                    <a href="public/fill/cv.pdf" title="pdf" download>
-                      <button className="download-btn">Download</button>
-                    </a>
-                    <IoMdClose className="close-button" onClick={close}>
-                      &times;
-                    </IoMdClose>
+              {(close) => (
+                <div className="custom-modal">
+                  <p>SCROLL DOWN</p>
+                  <div style={divStyle}>
+                    <iframe
+                      loading="lazy"
+                      style={iframeStyle}
+                      src="https://www.canva.com/design/DAGBWwoDXik/S0qAwj9rnl6eJVDtm8bGMw/view?embed"
+                      allowFullScreen="allowfullscreen"
+                      allow="fullscreen"
+                    ></iframe>
                   </div>
+                  <a href="public/fill/cv.pdf" title="pdf" download>
+                    <button className="download-btn">Download</button>
+                  </a>
+                  <IoMdClose className="close-button" onClick={close}>
+                    &times;
+                  </IoMdClose>
+                </div>
               )}
             </Popup>
             <hr className="t_border my-4 ml-0 text-left" />
@@ -86,11 +103,11 @@ const About = () => {
         </Row>
         <Row className=" sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">Work Timeline</h3>
+            <h3 className="color_sec py-4">Mes stages de BTS</h3>
           </Col>
           <Col lg="7">
             <table className="table caption-top">
-              <tbody>
+              <tbody className="tablee">
                 {worktimeline.map((data, i) => {
                   return (
                     <tr key={i}>
@@ -144,6 +161,19 @@ const About = () => {
           </Col>
         </Row>
       </Container>
+      <div className="custom-shape-divider-bottom-1712912114">
+        <svg
+          data-name="Layer 1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 1200 120"
+          preserveAspectRatio="none"
+        >
+          <path
+            d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+            className="shape-fill"
+          ></path>
+        </svg>
+      </div>
     </HelmetProvider>
   );
 };
