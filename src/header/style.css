@@ -18,6 +18,12 @@
     right: 0;
     padding: 3em 2em;
 }
+.veille-link {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 3em 2em;
+}
 .logo {
     font-family: "Bebas Neue", sans-serif;
 }

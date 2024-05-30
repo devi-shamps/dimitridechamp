@@ -146,7 +146,7 @@ const Awoc = () => {
           </div>
         </section>
 
-        <Link className="next-project" to="/awoc">
+        <Link className="next-project" to="/endima">
           <img src={nextProject} alt="Endima" />
           <div className="voile"></div>
           <div className="block"></div>

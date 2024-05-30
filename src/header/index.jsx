@@ -29,6 +29,12 @@ const Headermain = () => {
           >
             Contact
           </Link>
+          <Link
+            className="navbar-brand home-logo desktop-only veille-link"
+            to="/veille"
+          >
+            Veille Technologique
+          </Link>
           <button
             className="menu__button  nav_ac mobile-only"
             onClick={handleToggle}
