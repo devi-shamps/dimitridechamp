@@ -11,6 +11,7 @@ import {
 import Popup from "reactjs-popup";
 import { IoMdClose } from "react-icons/io";
 import transition from "../../transition.jsx";
+import competence from "./competence.png";
 
 const About = () => {
   const divStyle = {
@@ -101,9 +102,26 @@ const About = () => {
             </div>
           </Col>
         </Row>
+        <Row className="sec_sp">
+          <Col lg="6">
+            <h3 className="aboutMeTextTitle">Qui je suis?</h3>
+          </Col>
+          <Col lg="6">
+            <h3>Détails</h3>
+            <p>Age: 20 ans - 30/10/2003</p>
+            <p>Diplôme: Brevet Technicien Supérieur</p>
+            <p>Ville: Annecy</p>
+            <p>Téléphone: 06-28-25-05-60</p>
+            <p>
+              GitHub: <a href="https://github.com/devi-shamps">devi-shamps</a>
+            </p>
+          </Col>
+        </Row>
         <Row className=" sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">Mes stages de BTS</h3>
+            <h3 className="color_sec py-4 aboutMeTextTitle">
+              Mes stages de BTS
+            </h3>
           </Col>
           <Col lg="7">
             <table className="table caption-top">
@@ -123,7 +141,7 @@ const About = () => {
         </Row>
         <Row className="sec_sp">
           <Col lg="5">
-            <h3 className="color_sec py-4">Mes Compétences</h3>
+            <h3 className="color_sec py-4 aboutMeTextTitle">Mes Compétences</h3>
           </Col>
           <Col lg="7">
             {skills.map((data, i) => {
@@ -146,18 +164,11 @@ const About = () => {
           </Col>
         </Row>
         <Row className="sec_sp">
-          <Col lang="5">
-            <h3 className="color_sec py-4">services</h3>
-          </Col>
-          <Col lg="7">
-            {services.map((data, i) => {
-              return (
-                <div className="service_ py-4" key={i}>
-                  <h5 className="service__title">{data.title}</h5>
-                  <p className="service_desc">{data.description}</p>
-                </div>
-              );
-            })}
+          <Col className="d-flex align-items-center ">
+            <div>
+              <h1 className="display-4 mb-2 title">Tableau de compétence</h1>
+              <img src={competence} className="img-competence" alt="GSB" />
+            </div>
           </Col>
         </Row>
       </Container>

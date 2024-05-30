@@ -173,6 +173,14 @@
     margin-top: 1em;
     margin-bottom: 1em;
 }
+.aboutMeTextTitle {
+    font-size: 2em;
+    text-decoration: underline;
+    font-family: "Inconsolata", monospace;
+    font-weight: 700;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
 .title {
     font-family: "Bebas Neue", sans-serif;
 }
@@ -222,4 +230,10 @@
 
 .custom-shape-divider-bottom-1712912114 .shape-fill {
     fill: #FFFFFF;
+}
+
+.img-competence {
+    padding-top: 10px;
+    width: 100%; /* ou toute autre valeur que vous souhaitez */
+    height: auto; /* pour maintenir le ratio d'aspect de l'image */
 }

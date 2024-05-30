@@ -15,8 +15,8 @@ export default [
     mediaUrl: "/images/awocWeb.png",
   },
   {
-    title: "My Lodge",
+    title: "Endima",
     to: "/endima",
-    mediaUrl: "https://www.w3schools.com/w3images/forestbridge.jpg",
+    mediaUrl: "/images/endimaHome.png",
   },
 ];

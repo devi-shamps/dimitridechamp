@@ -17,7 +17,7 @@ import comptable from "./Capture-comptable.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Gsb = () => {
+const GsbMobile = () => {
   const projectInfoRef1 = useRef(null);
   const projectInfoRef2 = useRef(null);
 
@@ -51,7 +51,7 @@ const Gsb = () => {
             <div className="row">
               <div className="project-info">
                 <p ref={projectInfoRef1}>
-                  <span>Galaxy Swiss Bourdin</span>
+                  <span>Galaxy Swiss Bourdin Mobile</span>
                 </p>
                 <p ref={projectInfoRef2}>PROJET DE DEUXIEME ANNEE DE BTS SIO</p>
               </div>
@@ -63,15 +63,17 @@ const Gsb = () => {
           <div className="parent">
             <div className="div1">
               <p className="text-description">
-                Le projet GSB, qui signifie Galaxy Swiss Bourdin, est une
-                application web développée pour uniformiser le suivi des frais
-                engagés par les visiteurs pharmaceutiques. Son objectif
-                principal est de rationaliser la gestion des dépenses
-                importantes, tout en garantissant la{" "}
+                Le projet GSB Mobile, est une application mobile sous android
+                développée pour gérer centraliser les comptes-rendus des visites
+                des visiteurs pharmaceutiques, ainsi que de fournira une
+                description des produits du laboratoire, les coordonnées
+                précises des praticiens et des informations détaillées les
+                concernant. La{" "}
                 <strong>
                   <i>sécurité des données</i>
                 </strong>{" "}
-                et en simplifiant le processus pour les utilisateurs.
+                se fait par le biais d'une API développée en NodeJs et
+                l'authentification par le biais de JWT.
               </p>
             </div>
             <div className="div2">
@@ -82,10 +84,18 @@ const Gsb = () => {
                 <br />
                 Design: Bootstrap
                 <br />
-                Lien dépot Github:{" "}
+                Lien dépot Github (Android):{" "}
                 <a
                   style={{ color: "black" }}
-                  href="https://github.com/devi-shamps/GSB.git"
+                  href="https://github.com/devi-shamps/GSB_Visite.git"
+                >
+                  Cliquez ici
+                </a>
+                <br />
+                Lien (API):{" "}
+                <a
+                  style={{ color: "black" }}
+                  href="https://github.com/devi-shamps/Tp-Express-Js.git"
                 >
                   Cliquez ici
                 </a>
@@ -147,12 +157,16 @@ const Gsb = () => {
           </div>
         </section>
 
-        <Link className="next-project" to="/gsbMobile">
+        <Link
+          className="next-project"
+          to="/awoc"
+          onClick={() => window.scrollTo(0, 0)}
+        >
           <img src={nextProject} alt="Galaxy Swiss Borudin Mobile" />
           <div className="voile"></div>
           <div className="block"></div>
           <div className="text-h1">
-            GSB Mobile
+            AWOC
             <h4 className="text-h4">Porjet suivant</h4>
           </div>
         </Link>
@@ -161,4 +175,4 @@ const Gsb = () => {
   );
 };
 
-export default transition(Gsb);
+export default transition(GsbMobile);
