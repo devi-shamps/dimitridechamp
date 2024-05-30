@@ -160,6 +160,18 @@ code {
     opacity: 0.7;
     font-size: 16px;
 }
+
+.next-project .text-h4 {
+    text-align: center;
+    color: white;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: "Bebas Neue", sans-serif;
+    white-space: nowrap;
+    letter-spacing: 0px;
+    transition-duration: 0.5s;
+    transition-property: font-size;
+}
 .next-project .voile {
     position: absolute;
     top: 0;
@@ -181,7 +193,7 @@ code {
     text-align: center;
 }
 .endScroll .text-h2.serif {
-    font-family: Ginger;
+    font-family: roboto, sans-serif;
     font-size: 5em;
     font-weight: 300;
 }
@@ -193,3 +205,4 @@ code {
 .btn {
     cursor: none !important;
 }
+

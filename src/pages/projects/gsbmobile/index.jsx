@@ -10,10 +10,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import nextProject from "/public/images/gsbHome.png";
 
 import acceuilGsb from "./gsb.png";
-import ficheFrais from "./capture - fichefrais.png";
-import saisiFicheFrais from "./Capture-saisifichefrais.png";
+import mongoo from "./Capture-mongoo.png";
+import express from "./Capture-Express.png";
 import diagramme from "./diagramme.png";
-import comptable from "./Capture-comptable.png";
+import login from "./Capture-login.png";
+import code from "./Capture-codeandrodi.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -82,7 +83,7 @@ const GsbMobile = () => {
                 <br />
                 Travail: Autonomie
                 <br />
-                Design: Bootstrap
+                Technologie: Express.js, MongoDB, AndroidStudio, Java
                 <br />
                 Lien dépot Github (Android):{" "}
                 <a
@@ -102,46 +103,38 @@ const GsbMobile = () => {
               </p>
             </div>
             <div className="div3">
-              <img src={acceuilGsb} className="acceuilGsb" alt="GSB" />
+              <img src={mongoo} className="acceuilGsb" alt="GSB" />
             </div>
             <div className="div4">
               <p className="text-description">
-                J'ai utilisé le cahier des charges, fournie en début d'année,
-                comme guide essentiel pour définir rigoureusement les besoins
-                des utilisateurs garantissant ainsi que chaque aspect de
-                l'application réponde de manière optimale aux attentes des
-                utilisateurs. Mon implication dans la définition des besoins
-                s'est traduite par une compréhension approfondie des enjeux,
-                conduisant à des solutions logicielles adaptées et performantes.
-                Design Gestion de projet Compréhension des besoins Méthodologie
-                SCRUM.
+                Ce projet a été découper en plusieurs étapes. La première a été
+                d'établire la base de données correspondant au diagramme de
+                classes que nous avons préalablement conçu en classe. La base de
+                données est mise en place sur MongoDB Atlas qui est une base de
+                données NoSQL (Une base de donnée ou les tables ne sont pas
+                relationnelles). Ensuite, j'ai développai une API REST en
+                JavaScript en utilisant Express.js accessible via l'application
+                mobile Android. Cette application est conçue pour être utilisée
+                par les visiteurs.
               </p>
             </div>
             <div className="div5">
-              <img src={ficheFrais} className="acceuilGsb" alt="GSB" />
+              <img src={express} className="acceuilGsb" alt="GSB" />
             </div>
             <div className="div6">
-              <img src={saisiFicheFrais} className="acceuilGsb" alt="GSB" />
+              <img src={code} className="acceuilGsb" alt="GSB" />
             </div>
             <div className="div7">
               <p className="text-description">
                 Plusieurs affichages sont disponibles pour les visiteurs comme
-                la visualisation de leurs fiche de frais en fonction du mois
-                choisi dans le menu déroulant "mois". Ou bien encore la saisie
-                de la fiche de frais du mois en cours. <br />
-                <br />
-                De plus, si l'utilisateur connecté est comptable (Role Comptable
-                au sein de l'application) celui-ci pourra visualiser et/ou
-                modifier les fiches de frais des visiteurs dans une vue dédiée.
+                la visualisation des praticiens dans leurs portfeuille de
+                praticiens ainsi que les détails du praticiens. <br />
               </p>
             </div>
             <div className="div8">
-              <img src={ficheFrais} className="acceuilGsb" alt="GSB" />
+              <img src={login} className="acceuilGsb tailleLogin" alt="GSB" />
             </div>
             <div className="div9">
-              <img src={comptable} className="acceuilGsb" alt="GSB" />
-            </div>
-            <div className="div10">
               <h1 className="text-infoprojet">
                 Diagramme de classe de l'application
               </h1>
@@ -149,7 +142,7 @@ const GsbMobile = () => {
             </div>
           </div>
           <div className="endScroll">
-            <h2 className="text-h2 serif">Merci d'avoir regardé !</h2>
+            <h2 className="text-h2">Merci d'avoir regardé !</h2>
             <p className="text-description">
               Un projet ludique de deuxième annèe
             </p>
